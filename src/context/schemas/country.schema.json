@@ -3,16 +3,23 @@
   "$id": "https://fdc3.finos.org/schemas/next/country.schema.json",
   "type": "object",
   "title": "Country",
-  "allOf": [{ "$ref": "context.schema.json#/" }],
-  "properties": {
-    "type": { "const": "fdc3.country" },
-    "id": {
-      "type": "object",
+  "allOf": [
+    { "$ref": "context.schema.json" },
+    {
       "properties": {
-        "ISOALPHA2": { "type": "string" },
-        "ISOALPHA3": { "type": "string" }
-      }
+        "type": {
+          "const": "fdc3.country",
+          "tsType": "ContextType"
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "ISOALPHA2": { "type": "string" },
+            "ISOALPHA3": { "type": "string" }
+          }
+        }
+      },
+      "required": [ "type", "id" ]
     }
-  },
-  "required": ["id"]
+  ]
 }

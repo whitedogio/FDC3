@@ -3,23 +3,30 @@
   "$id": "https://fdc3.finos.org/schemas/next/instrument.schema.json",
   "type": "object",
   "title": "Instrument",
-  "allOf": [{ "$ref": "context.schema.json#/" }],
-  "properties": {
-    "type": { "const": "fdc3.instrument" },
-    "id": {
-      "type": "object",
+  "allOf": [
+    { "$ref": "context.schema.json" },
+    {
       "properties": {
-        "BBG": { "type": "string" },
-        "CUSIP": { "type": "string" },
-        "FDS_ID": { "type": "string" },
-        "FIGI": { "type": "string" },
-        "ISIN": { "type": "string" },
-        "PERMID": { "type": "string" },
-        "RIC": { "type": "string" },
-        "SEDOL": { "type": "string" },
-        "ticker": { "type": "string" }
-      }
+        "type": {
+          "const": "fdc3.instrument",
+          "tsType": "ContextType"
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "BBG": { "type": "string" },
+            "CUSIP": { "type": "string" },
+            "FDS_ID": { "type": "string" },
+            "FIGI": { "type": "string" },
+            "ISIN": { "type": "string" },
+            "PERMID": { "type": "string" },
+            "RIC": { "type": "string" },
+            "SEDOL": { "type": "string" },
+            "ticker": { "type": "string" }
+          }
+        }
+      },
+      "required": [ "type", "id" ]
     }
-  },
-  "required": ["id"]
+  ]
 }

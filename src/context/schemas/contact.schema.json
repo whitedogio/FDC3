@@ -3,16 +3,31 @@
   "$id": "https://fdc3.finos.org/schemas/next/contact.schema.json",
   "type": "object",
   "title": "Contact",
-  "allOf": [{ "$ref": "context.schema.json#/" }],
-  "properties": {
-    "type": { "const": "fdc3.contact" },
-    "id": {
-      "type": "object",
+  "allOf": [
+    {
+      "$ref": "context.schema.json"
+    },
+    {
       "properties": {
-        "email": { "type": "string" },
-        "FDS_ID": { "type": "string" }
-      }
+        "type": {
+          "const": "fdc3.contact",
+          "tsType": "ContextType"
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "FDS_ID": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "id", "type"
+      ]
     }
-  },
-  "required": ["id"]
+  ]
 }

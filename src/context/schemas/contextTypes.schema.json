@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://fdc3.finos.org/schemas/next/contextTypes.schema.json",
+    "type": "string",
+    "title": "ContextTypes",
+    "enum": [
+        "fdc3.contact",
+        "fdc3.contactList",
+        "fdc3.country",
+        "fdc3.instrument",
+        "fdc3.organization",
+        "fdc3.portfolio",
+        "fdc3.position"
+    ],
+    "tsEnumNames": [
+        "Contact",
+        "ContactList",
+        "Country",
+        "Instrument",
+        "Organization",
+        "Portfolio",
+        "Position"
+    ]
+}

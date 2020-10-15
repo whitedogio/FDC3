@@ -4,12 +4,20 @@
   "type": "object",
   "title": "Context",
   "properties": {
-    "type": { "type": "string" },
-    "name": { "type": "string" },
+    "type": {
+      "$ref": "contextType.schema.json"
+    },
+    "name": {
+      "type": "string"
+    },
     "id": {
       "type": "object",
-      "additionalProperties": { "type": "string" }
+      "additionalProperties": {
+        "type": "string"
+      }
     }
   },
-  "required": ["type"]
+  "required": [
+    "type"
+  ]
 }

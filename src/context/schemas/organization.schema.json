@@ -3,17 +3,24 @@
   "$id": "https://fdc3.finos.org/schemas/next/organization.schema.json",
   "type": "object",
   "title": "Organization",
-  "allOf": [{ "$ref": "context.schema.json#/" }],
-  "properties": {
-    "type": { "const": "fdc3.organization" },
-    "id": {
-      "type": "object",
+  "allOf": [
+    { "$ref": "context.schema.json" },
+    {
       "properties": {
-        "LEI": { "type": "string" },
-        "PERMID": { "type": "string" },
-        "FDS_ID": { "type": "string" }
-      }
+        "type": {
+          "const": "fdc3.organization",
+          "tsType": "ContextType"
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "LEI": { "type": "string" },
+            "PERMID": { "type": "string" },
+            "FDS_ID": { "type": "string" }
+          }
+        }
+      },
+      "required": [ "type", "id" ]
     }
-  },
-  "required": ["id"]
+  ]
 }

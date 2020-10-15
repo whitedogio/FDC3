@@ -3,13 +3,20 @@
   "$id": "https://fdc3.finos.org/schemas/next/contactList.schema.json",
   "type": "object",
   "title": "ContactList",
-  "allOf": [{ "$ref": "context.schema.json#/" }],
-  "properties": {
-    "type": { "const": "fdc3.contactList" },
-    "contacts": {
-      "type": "array",
-      "items": { "$ref": "contact.schema.json#/" }
+  "allOf": [
+    { "$ref": "context.schema.json" },
+    {
+      "properties": {
+        "type": {
+          "const": "fdc3.contactList",
+          "tsType": "ContextType"
+        },
+        "contacts": {
+          "type": "array",
+          "items": { "$ref": "contact.schema.json" }
+        }
+      },
+      "required": ["type", "contacts"]
     }
-  },
-  "required": ["contacts"]
+  ]
 }
