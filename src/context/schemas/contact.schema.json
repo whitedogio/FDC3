@@ -4,9 +4,7 @@
   "type": "object",
   "title": "Contact",
   "allOf": [
-    {
-      "$ref": "context.schema.json"
-    },
+    { "$ref": "context.schema.json" },
     {
       "properties": {
         "type": {

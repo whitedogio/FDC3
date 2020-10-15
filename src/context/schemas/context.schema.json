@@ -4,9 +4,7 @@
   "type": "object",
   "title": "Context",
   "properties": {
-    "type": {
-      "$ref": "contextType.schema.json"
-    },
+    "type": { "$ref": "contextType.schema.json" },
     "name": {
       "type": "string"
     },
@@ -17,7 +15,5 @@
       }
     }
   },
-  "required": [
-    "type"
-  ]
+  "required": [ "type" ]
 }
